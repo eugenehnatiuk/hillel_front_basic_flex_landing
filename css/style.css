@@ -1,6 +1,6 @@
 @import url(common.css);
 
-/* Global */
+/* _________________GLOBAL_________________ */
 
 body {
   color: var(--font_color);
@@ -18,8 +18,20 @@ p {
   font-size: 18px;
   line-height: 30px;
 }
-/* Header */
-.header {
+
+h2 {
+  font-family: "Architects Daughter";
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+a {
+  text-decoration: none;
+  color: var(--font_color);
+}
+
+/* _________________HEADER_________________ */
+.header_box {
   background: var(--main_color);
   padding: 20px 0;
 }
@@ -38,16 +50,18 @@ p {
   font-weight: 400;
   line-height: 30px;
 }
-.header_menu > li:hover {
+.header_menu > li > a:hover {
   color: var(--active_color);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
-/* Home Section */
+/* _________________HOME_________________ */
 .home_box {
   display: flex;
   gap: 30px;
   align-items: center;
+  padding-bottom: 120px;
 }
 .home_content {
   width: 540px;
@@ -87,6 +101,7 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+/* если убрать justify-content: center то этим способом можно также выровнять контент */
 /* .help_button > span {
   text-align: center;
   flex: 1;
@@ -99,6 +114,7 @@ h1 {
   background-color: rgb(69, 126, 34);
   box-shadow: 0px 0px 2px rgb(118, 160, 90);
 }
+
 .help_button:hover {
   box-shadow: 0px 0px 10px rgb(118, 160, 90);
   border: 2px solid var(--main_color);
@@ -110,52 +126,151 @@ h1 {
 
 .home_img > img {
   width: 540px;
-  height: 670px;
+  /* height: 670px; */
   object-fit: cover;
   vertical-align: middle;
 }
 
-/* About us */
+/* _________________ABOUT US_________________ */
 .about_us_box {
-  padding: 120px 0px;
+  padding-bottom: 120px;
+}
+
+.about_us_content {
   width: 540px;
   text-align: center;
+  padding-bottom: 120px;
 }
+
 h2 {
   font-family: "Architects Daughter";
   font-size: 32px;
   font-weight: 400;
- }
- h2 {
-	margin-bottom: 50px;
- }
-
- .advantages{
-	width: 100%;
-	background: var(--main_color);
-	/* height: 126px; */
- }
- .advantages > ul{
-	display: flex;
-	gap: 90px;
-	justify-content: space-between;
-	padding: 78px 0px;
- }
-.advantages ul{
-	font-family: Montserrat;
-font-size: 18px;
-font-weight: 500;
+  margin-bottom: 50px;
 }
 
- .list{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 25px;
- }
+.advantages {
+  width: 100%;
+  background: var(--main_color);
+}
 
- .list img:hover{
-	width: 90px;
-	height: 89px;
- }
+.advantages > ul {
+  display: flex;
+  gap: 90px;
+  justify-content: space-between;
+  padding: 78px 0px;
+}
+.advantages ul {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.list img:hover {
+  transform: scale(1.1);
+}
+
+/* _________________HOW WE WORK_________________ */
+
+.how_we_work_box {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 120px;
+}
+
+.how_we_work_img > img {
+  width: 540px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.how_we_work_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 540px;
+}
+
+/* _________________OUR WORKS_________________ */
+
+.our_wors_box {
+  padding-bottom: 120px;
+}
+
+.our_wors_box > h2 {
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+}
+.card {
+  width: 350px;
+  border-radius: 6px;
+  background: var(--main_color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_img {
+  width: 320px;
+  border-radius: 6px;
+  padding: 15px 15px 23px 15px;
+}
+.card > img {
+  object-fit: cover;
+}
+
+.card > p {
+  padding-bottom: 23px;
+}
+
+/* _________________FOOTER_________________ */
+.footer {
+  background: var(--main_color);
+}
+.footer_menu {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.footer_menu > a {
+  display: inline-block;
+  height: 36px;
+}
+
+.footer_menu a + p {
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.social {
+  padding-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+/* .social > a > img{
+	padding-left: 10pz;
+} */
+.© {
+  font-size: 16px;
+  font-weight: 500;
+}
