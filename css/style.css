@@ -6,6 +6,7 @@ body {
   color: var(--font_color);
   background: var(--background_color);
 }
+
 .container {
   width: 1110px;
   margin: 0 auto;
@@ -25,6 +26,7 @@ h2 {
   font-weight: 400;
   margin-bottom: 50px;
 }
+
 a {
   text-decoration: none;
   color: var(--font_color);
@@ -50,6 +52,7 @@ a {
   font-weight: 400;
   line-height: 30px;
 }
+
 .header_menu > li > a:hover {
   color: var(--active_color);
   transform: scale(1.1);
@@ -63,18 +66,22 @@ a {
   align-items: center;
   padding-bottom: 120px;
 }
+
 .home_content {
   width: 540px;
 }
+
 h1 {
   font-family: "Architects Daughter";
   font-size: 62px;
   font-weight: 400;
   padding-bottom: 41px;
 }
+
 .home_content > p {
   margin-bottom: 20px;
 }
+
 .buttons {
   display: flex;
   gap: 23px;
@@ -83,6 +90,7 @@ h1 {
   font-weight: 400;
   align-items: center;
 }
+
 .order_button {
   width: 197px;
   height: 60px;
@@ -108,19 +116,20 @@ h1 {
 } */
 
 .order_button:hover {
-  box-shadow: 0px 0px 10px rgb(118, 160, 90);
+  box-shadow: 0px 0px 10px var(--box_shadow);
 }
+
 .order_button:active {
-  background-color: rgb(69, 126, 34);
-  box-shadow: 0px 0px 2px rgb(118, 160, 90);
+  background-color: var(--background_color_active);
+  box-shadow: 0px 0px 2px var(--box_shadow);
 }
 
 .help_button:hover {
-  box-shadow: 0px 0px 10px rgb(118, 160, 90);
+  box-shadow: 0px 0px 10px var(--box_shadow);
   border: 2px solid var(--main_color);
 }
 .help_button:active {
-  box-shadow: 0px 0px 2px rgb(58, 124, 16);
+  box-shadow: 0px 0px 2px var(--box_shadow_second);
   border: 1px solid var(--main_color);
 }
 
@@ -158,6 +167,7 @@ h2 {
   justify-content: space-between;
   padding: 78px 0px;
 }
+
 .advantages ul {
   font-family: Montserrat;
   font-size: 18px;
@@ -177,7 +187,6 @@ h2 {
 }
 
 /* _________________HOW WE WORK_________________ */
-
 .how_we_work_box {
   display: flex;
   gap: 30px;
@@ -211,6 +220,7 @@ h2 {
   display: flex;
   gap: 30px;
 }
+
 .card {
   width: 350px;
   border-radius: 6px;
@@ -226,6 +236,7 @@ h2 {
   border-radius: 6px;
   padding: 15px 15px 23px 15px;
 }
+
 .card > img {
   object-fit: cover;
 }
@@ -238,6 +249,7 @@ h2 {
 .footer {
   background: var(--main_color);
 }
+
 .footer_menu {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -247,6 +259,7 @@ h2 {
   font-weight: 400;
   line-height: 30px;
 }
+
 .footer_menu > a {
   display: inline-block;
   height: 36px;
@@ -267,6 +280,7 @@ h2 {
 /* .social > a > img{
 	padding-left: 10pz;
 } */
+
 .© {
   font-size: 16px;
   font-weight: 500;
