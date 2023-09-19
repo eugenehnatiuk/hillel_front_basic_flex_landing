@@ -125,8 +125,6 @@ h1 {
 }
 
 .home_img > img {
-  width: 540px;
-  /* height: 670px; */
   object-fit: cover;
   vertical-align: middle;
 }
@@ -187,7 +185,6 @@ h2 {
 }
 
 .how_we_work_img > img {
-  width: 540px;
   object-fit: cover;
   vertical-align: middle;
 }
