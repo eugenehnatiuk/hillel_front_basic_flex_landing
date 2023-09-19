@@ -1,2 +1,161 @@
 @import url(common.css);
 
+/* Global */
+
+body {
+  color: var(--font_color);
+  background: var(--background_color);
+}
+.container {
+  width: 1110px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+/* Header */
+.header {
+  background: var(--main_color);
+  padding: 20px 0;
+}
+
+.flex_contaner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_menu {
+  display: flex;
+  gap: 30px;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.header_menu > li:hover {
+  color: var(--active_color);
+  cursor: pointer;
+}
+
+/* Home Section */
+.home_box {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.home_content {
+  width: 540px;
+}
+h1 {
+  font-family: "Architects Daughter";
+  font-size: 62px;
+  font-style: 400;
+  padding-bottom: 41px;
+}
+.home_content > p {
+  margin-bottom: 20px;
+}
+.buttons {
+  display: flex;
+  gap: 23px;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  align-items: center;
+}
+.order_button {
+  width: 197px;
+  height: 60px;
+  background: var(--main_color);
+  border-radius: 6px;
+}
+
+.help_button {
+  text-decoration: none;
+  color: var(--font_color);
+  width: 157px;
+  height: 60px;
+  border: 1px solid var(--main_color);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .help_button > span {
+  text-align: center;
+  flex: 1;
+} */
+
+.order_button:hover {
+  box-shadow: 0px 0px 10px rgb(118, 160, 90);
+}
+.order_button:active {
+  background-color: rgb(69, 126, 34);
+  box-shadow: 0px 0px 2px rgb(118, 160, 90);
+}
+.help_button:hover {
+  box-shadow: 0px 0px 10px rgb(118, 160, 90);
+  border: 2px solid var(--main_color);
+}
+.help_button:active {
+  box-shadow: 0px 0px 2px rgb(58, 124, 16);
+  border: 1px solid var(--main_color);
+}
+
+.home_img > img {
+  width: 540px;
+  height: 670px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+/* About us */
+.about_us_box {
+  padding: 120px 0px;
+  width: 540px;
+  text-align: center;
+}
+h2 {
+  font-family: "Architects Daughter";
+  font-size: 32px;
+  font-weight: 400;
+ }
+ h2 {
+	margin-bottom: 50px;
+ }
+
+ .advantages{
+	width: 100%;
+	background: var(--main_color);
+	/* height: 126px; */
+ }
+ .advantages > ul{
+	display: flex;
+	gap: 90px;
+	justify-content: space-between;
+	padding: 78px 0px;
+ }
+.advantages ul{
+	font-family: Montserrat;
+font-size: 18px;
+font-weight: 500;
+}
+
+ .list{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 25px;
+ }
+
+ .list img:hover{
+	width: 90px;
+	height: 89px;
+ }

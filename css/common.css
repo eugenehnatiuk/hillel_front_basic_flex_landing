@@ -73,3 +73,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Color */
+:root{
+	--main_color: rgb(129, 163, 107);
+	--background_color: #D8D8D6;
+	--font_color: #161616;
+	--active_color: #FFAD8F;
+	scroll-behavior: smooth;
+	
+
+}
