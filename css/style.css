@@ -19,13 +19,17 @@ p {
   font-size: 18px;
   line-height: 30px;
 }
+h1 {
+  font-family: "Architects Daughter";
+  font-size: 62px;
+  font-weight: 400;
+}
 
 h2 {
   font-family: "Architects Daughter";
   font-size: 32px;
   font-weight: 400;
-  margin-bottom: 50px;
-}
+ }
 
 a {
   text-decoration: none;
@@ -72,9 +76,6 @@ a {
 }
 
 h1 {
-  font-family: "Architects Daughter";
-  font-size: 62px;
-  font-weight: 400;
   padding-bottom: 41px;
 }
 
@@ -150,9 +151,6 @@ h1 {
 }
 
 h2 {
-  font-family: "Architects Daughter";
-  font-size: 32px;
-  font-weight: 400;
   margin-bottom: 50px;
 }
 
