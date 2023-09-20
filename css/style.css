@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  width: 1110px;
+  width: 1140px;
   margin: 0 auto;
   padding: 0px 15px;
 }
@@ -29,7 +29,7 @@ h2 {
   font-family: "Architects Daughter";
   font-size: 32px;
   font-weight: 400;
- }
+}
 
 a {
   text-decoration: none;
@@ -61,6 +61,7 @@ a {
   color: var(--active_color);
   transform: scale(1.1);
   cursor: pointer;
+  border-bottom: 1px solid var(--active_color);
 }
 
 /* _________________HOME_________________ */
@@ -72,11 +73,11 @@ a {
 }
 
 .home_content {
-  width: 540px;
+  flex: 1 1 540px;
 }
 
 h1 {
-  padding-bottom: 41px;
+  margin-bottom: 40px;
 }
 
 .home_content > p {
@@ -91,24 +92,26 @@ h1 {
   font-weight: 400;
   align-items: center;
 }
-
-.order_button {
-  width: 197px;
-  height: 60px;
-  background: var(--main_color);
+.btn {
+  padding: 19px 34px 19px 34px;
   border-radius: 6px;
+  cursor: pointer;
+}
+.order_button {
+  /* width: 197px;
+  height: 60px; */
+  background: var(--main_color);
 }
 
 .help_button {
   text-decoration: none;
   color: var(--font_color);
-  width: 157px;
-  height: 60px;
+  /* width: 157px;
+  height: 60px; */
   border: 1px solid var(--main_color);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  /* align-items: center;
+  justify-content: center; */
 }
 /* если убрать justify-content: center то этим способом можно также выровнять контент */
 /* .help_button > span {
@@ -117,7 +120,7 @@ h1 {
 } */
 
 .order_button:hover {
-  box-shadow: 0px 0px 10px var(--box_shadow);
+  box-shadow: 0px 0px 0px 2px var(--box_shadow);
 }
 
 .order_button:active {
@@ -126,26 +129,35 @@ h1 {
 }
 
 .help_button:hover {
-  box-shadow: 0px 0px 10px var(--box_shadow);
-  border: 2px solid var(--main_color);
+  box-shadow: 0px 0px 0px 2px var(--box_shadow);
+  outline: 2px solid var(--main_color);
 }
 .help_button:active {
   box-shadow: 0px 0px 2px var(--box_shadow_second);
-  border: 1px solid var(--main_color);
+  outline: 1px solid var(--main_color);
+}
+.home_img {
+  height: 670px;
+  flex: 1 1 540px;
 }
 
 .home_img > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   vertical-align: middle;
 }
 
 /* _________________ABOUT US_________________ */
+/* .about_us{
+	text-align: center;
+} */
 .about_us_box {
   padding-bottom: 120px;
 }
 
 .about_us_content {
-  width: 540px;
+  width: 570px;
   text-align: center;
   padding-bottom: 120px;
 }
@@ -155,31 +167,35 @@ h2 {
 }
 
 .advantages {
-  width: 100%;
   background: var(--main_color);
 }
 
 .advantages > ul {
   display: flex;
-  gap: 90px;
+  /* gap: 90px; */
   justify-content: space-between;
-  padding: 78px 0px;
+  padding: 78px 15px;
 }
 
-.advantages ul {
-  font-family: Montserrat;
+.advantages ul > li > p {
+  font-family: "Montserrat";
   font-size: 18px;
   font-weight: 500;
 }
 
 .list {
-  display: flex;
+  text-align: center;
+  white-space: nowrap;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 25px; */
 }
 
+.list img {
+  margin-bottom: 25px;
+}
 .list img:hover {
   transform: scale(1.1);
 }
@@ -189,19 +205,25 @@ h2 {
   display: flex;
   gap: 30px;
   padding-bottom: 120px;
+  align-items: center;
 }
-
+.how_we_work_img {
+  height: 560px;
+  flex: 1 1 540px;
+}
 .how_we_work_img > img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   vertical-align: middle;
 }
 
 .how_we_work_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 540px;
+  flex: 1 1 540px;
+  text-align: justify;
+}
+.how_we_work_content h2 {
+  text-align: center;
 }
 
 /* _________________OUR WORKS_________________ */
@@ -220,44 +242,41 @@ h2 {
 }
 
 .card {
-  width: 350px;
+  flex: 1 1 350px;
   border-radius: 6px;
   background: var(--main_color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 15px 15px 40px 15px;
 }
 
 .card_img {
-  width: 320px;
-  border-radius: 6px;
-  padding: 15px 15px 23px 15px;
-}
-
-.card > img {
+  display: block;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+  height: 400px;
+  margin-bottom: 23px;
 }
 
 .card > p {
-  padding-bottom: 23px;
+  text-align: center;
 }
 
 /* _________________FOOTER_________________ */
 .footer {
   background: var(--main_color);
+  padding: 50px 0px;
 }
 
 .footer_menu {
-  padding-top: 50px;
-  padding-bottom: 50px;
   text-align: center;
   font-family: "Roboto";
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
 }
-
+.footer_logo {
+  margin-bottom: 20px;
+}
 .footer_menu > a {
   display: inline-block;
   height: 36px;
@@ -265,19 +284,19 @@ h2 {
 
 .footer_menu a + p {
   font-size: 24px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
-
-.social {
-  padding-top: 15px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
+.footer_menu > ul {
+  margin-bottom: 15px;
 }
-/* .social > a > img{
-	padding-left: 10pz;
-} */
+.social > a {
+  display: inline-block;
+  line-height: 10px;
+  padding-left: 10px;
+}
+.social a:first-child {
+  padding-left: 0;
+}
 
 .© {
   font-size: 16px;
