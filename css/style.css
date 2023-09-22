@@ -85,33 +85,28 @@ h1 {
 }
 
 .buttons {
-  display: flex;
-  gap: 23px;
   font-family: "Roboto";
   font-size: 18px;
   font-weight: 400;
-  align-items: center;
 }
 .btn {
   padding: 19px 34px 19px 34px;
   border-radius: 6px;
   cursor: pointer;
 }
+.btn:first-child {
+  margin-right: 23px;
+}
+
 .order_button {
-  /* width: 197px;
-  height: 60px; */
   background: var(--main_color);
 }
 
 .help_button {
   text-decoration: none;
   color: var(--font_color);
-  /* width: 157px;
-  height: 60px; */
   border: 1px solid var(--main_color);
   display: inline-block;
-  /* align-items: center;
-  justify-content: center; */
 }
 
 .order_button:hover {
@@ -144,9 +139,6 @@ h1 {
 }
 
 /* _________________ABOUT US_________________ */
-/* .about_us{
-	text-align: center;
-} */
 .about_us_box {
   padding-bottom: 120px;
 }
@@ -167,7 +159,6 @@ h2 {
 
 .advantages > ul {
   display: flex;
-  /* gap: 90px; */
   justify-content: space-between;
   padding: 78px 15px;
 }
@@ -181,11 +172,6 @@ h2 {
 .list {
   text-align: center;
   white-space: nowrap;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 25px; */
 }
 
 .list img {
@@ -270,11 +256,11 @@ h2 {
   line-height: 30px;
 }
 .footer_logo {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .footer_menu > a {
   display: inline-block;
-  height: 36px;
+  height: 26px;
 }
 
 .footer_menu a + p {
