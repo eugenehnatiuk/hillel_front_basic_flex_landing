@@ -5,28 +5,26 @@
 body {
   color: var(--font_color);
   background: var(--background_color);
-}
-
-.container {
-  width: 1140px;
-  margin: 0 auto;
-  padding: 0px 15px;
-}
-
-p {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
 }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
 h1 {
-  font-family: "Architects Daughter";
+  font-family: 'Architects Daughter';
   font-size: 62px;
   font-weight: 400;
 }
 
 h2 {
-  font-family: "Architects Daughter";
+  font-family: 'Architects Daughter';
   font-size: 32px;
   font-weight: 400;
 }
@@ -51,17 +49,75 @@ a {
 .header_menu {
   display: flex;
   gap: 30px;
-  font-family: "Roboto";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
 }
 
-.header_menu > li > a:hover {
-  color: var(--active_color);
-  transform: scale(1.1);
+.header_menu li {
+  position: relative;
+}
+
+.header_menu > li a::before,
+.header_menu > li a::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  border-radius: 6px;
+  background: var(--active_color);
+  transition: all 0.2s linear;
+}
+
+.header_menu > li:hover a::after,
+.header_menu > li:hover a::after {
+  width: 100%;
+  left: 0;
+  transition: all 0.2s linear;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 25px;
   cursor: pointer;
-  border-bottom: 1px solid var(--active_color);
+}
+
+.burger::before,
+.burger span,
+.burger::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--font_color);
+  height: 4px;
+  border-radius: 6px;
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger::after {
+  top: auto;
+  bottom: -1px;
+}
+.burger:hover span {
+  transform: scale(0);
+}
+
+.burger:hover::after {
+  top: 50%;
+  transform-origin: center;
+  transform: rotate(405deg);
+}
+.burger:hover::before {
+  top: 50%;
+  transform-origin: center;
+  transform: rotate(-405deg);
 }
 
 /* _________________HOME_________________ */
@@ -69,11 +125,16 @@ a {
   display: flex;
   gap: 30px;
   align-items: center;
+  justify-content: center;
   padding-bottom: 120px;
 }
 
 .home_content {
-  flex: 1 1 540px;
+  flex: 0 1 50%;
+}
+
+.home_img {
+  flex: 0 0 50%;
 }
 
 h1 {
@@ -84,11 +145,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-.buttons {
-  font-family: "Roboto";
-  font-size: 18px;
-  font-weight: 400;
-}
 .btn {
   padding: 19px 34px 19px 34px;
   border-radius: 6px;
@@ -126,10 +182,6 @@ h1 {
   box-shadow: 0px 0px 2px var(--box_shadow_second);
   outline: 1px solid var(--main_color);
 }
-.home_img {
-  height: 670px;
-  flex: 1 1 540px;
-}
 
 .home_img > img {
   width: 100%;
@@ -144,7 +196,7 @@ h1 {
 }
 
 .about_us_content {
-  width: 570px;
+  max-width: 540px;
   text-align: center;
   padding-bottom: 120px;
 }
@@ -164,7 +216,7 @@ h2 {
 }
 
 .advantages ul > li > p {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-size: 18px;
   font-weight: 500;
 }
@@ -174,10 +226,13 @@ h2 {
   white-space: nowrap;
 }
 
-.list img {
+.list svg {
+  width: 80px;
+  height: 79px;
   margin-bottom: 25px;
+  fill: #161616;
 }
-.list img:hover {
+.list svg:hover {
   transform: scale(1.1);
 }
 
@@ -189,9 +244,10 @@ h2 {
   align-items: center;
 }
 .how_we_work_img {
-  height: 560px;
-  flex: 1 1 540px;
+  /* height: 560px; */
+  flex: 0 0 50%;
 }
+
 .how_we_work_img > img {
   height: 100%;
   width: 100%;
@@ -200,8 +256,8 @@ h2 {
 }
 
 .how_we_work_content {
-  flex: 1 1 540px;
-  text-align: justify;
+  flex: 0 1 50%;
+  text-align: left;
 }
 .how_we_work_content h2 {
   text-align: center;
@@ -220,10 +276,12 @@ h2 {
 .cards {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-  flex: 1 1 350px;
+  flex: 0 0 30%;
   border-radius: 6px;
   background: var(--main_color);
   padding: 15px 15px 40px 15px;
@@ -232,9 +290,13 @@ h2 {
 .card_img {
   display: block;
   object-fit: cover;
-  width: 100%;
-  height: 400px;
+  /* width: 100%; */
+  /* height: 400px; */
   margin-bottom: 23px;
+}
+.card_img img {
+  width: 320px;
+  height: 402px;
 }
 
 .card > p {
@@ -249,10 +311,6 @@ h2 {
 
 .footer_menu {
   text-align: center;
-  font-family: "Roboto";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
 }
 .footer_logo {
   margin-bottom: 30px;
@@ -272,13 +330,128 @@ h2 {
 .social > a {
   display: inline-block;
   line-height: 10px;
-  padding-left: 10px;
+  margin-left: 10px;
 }
+
 .social a:first-child {
-  padding-left: 0;
+  margin-left: 0;
+}
+
+.social a:nth-child(2) {
+  width: 28px;
+}
+.social a:nth-child(2) svg {
+  width: 28px;
+}
+
+.social > a > svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--font_color);
 }
 
 .© {
   font-size: 16px;
   font-weight: 500;
+}
+
+/* _____________________________MEDIA__________________________ */
+
+@media (max-width: 860px) {
+  body {
+    font-size: 16px;
+  }
+  .header_menu {
+    font-size: 16px;
+  }
+
+  .logo img {
+    width: 120px;
+    height: 32px;
+  }
+
+  /* HOME */
+  .home_box {
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 60px;
+  }
+
+  .home_content {
+    max-width: 540px;
+    flex: 0 0;
+    text-align: center;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .home_img {
+    height: 350px;
+    flex: 0 0 500px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+ 
+  .buttons {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 15px 30px;
+  }
+
+  .btn:first-child {
+    margin-right: 20px;
+  }
+  /* ABOUT US */
+  .about_us_box {
+    padding-bottom: 30px;
+  }
+  .about_us_content {
+    max-width: 58%;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .advantages > ul {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 15px;
+  }
+
+  /* HOW WE WORK */
+  .how_we_work_box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 60px;
+  }
+  .how_we_work_img {
+    height: 350px;
+    flex: 0 0 415px;
+  }
+  .how_we_work_content {
+    max-width: 540px;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header_menu {
+     display: none;
+  }
+
+  .burger {
+    display: block;
+  }
 }
