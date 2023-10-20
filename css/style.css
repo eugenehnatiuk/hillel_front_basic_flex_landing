@@ -365,9 +365,14 @@ h2 {
     font-size: 16px;
   }
 
+  .flex_contaner > a {
+    width: 110px;
+    height: 28px;
+  }
+
   .logo img {
-    width: 120px;
-    height: 32px;
+    width: 100%;
+    height: 100%;
   }
 
   /* HOME */
@@ -378,7 +383,7 @@ h2 {
   }
 
   .home_content {
-    max-width: 540px;
+    max-width: 70%;
     flex: 0 0;
     text-align: center;
     margin-top: 50px;
@@ -393,7 +398,7 @@ h2 {
   h1 {
     font-size: 40px;
   }
- 
+
   .buttons {
     font-size: 16px;
   }
@@ -439,19 +444,60 @@ h2 {
     flex: 0 0 415px;
   }
   .how_we_work_content {
-    max-width: 540px;
+    max-width: 70%;
     margin-top: 50px;
     text-align: center;
   }
 }
 
-
 @media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
   .header_menu {
-     display: none;
+    display: none;
   }
 
   .burger {
     display: block;
+  }
+
+  .home_img {
+    flex: 0 0 422px;
+  }
+
+  .how_we_work_img {
+    flex: 0 0 350px;
+  }
+
+  .home_content {
+    max-width: 58%;
+  }
+  .how_we_work_content {
+    max-width: 58%;
+  }
+
+  .advantages ul {
+    gap: 0;
+  }
+  .advantages ul > li {
+    transform: scale(0.7);
+  }
+
+  .card {
+    padding: 10px 10px 20px 10px;
+    width: 263px;
+  }
+
+  .card_img {
+    margin-bottom: 10px;
+
+    text-align: center;
+  }
+
+  .card_img img {
+    text-align: center;
+    width: 100%;
+    height: 100%;
   }
 }
