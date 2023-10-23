@@ -384,7 +384,6 @@ h2 {
 
   .home_content {
     max-width: 540px;
-    /* flex: 0 0; */
     text-align: center;
     margin-top: 50px;
     text-align: center;
@@ -392,7 +391,6 @@ h2 {
 
   .home_img {
     height: 350px;
-    /* flex: 0 0 500px; */
   }
 
   h1 {
@@ -441,8 +439,8 @@ h2 {
   }
   .how_we_work_img {
     height: 350px;
-    /* flex: 0 0 415px; */
   }
+
   .how_we_work_content {
     max-width: 540px;
     margin-top: 50px;
@@ -450,8 +448,6 @@ h2 {
   }
 
   .card {
-    /* padding: 10px 10px 20px 10px; */
-    /* width: 263px; */
     flex: 0 1 70%;
   }
 }
@@ -468,25 +464,6 @@ h2 {
     display: block;
   }
 
-  /* .home_img {
-    flex: 0 0 422px;
-  } */
-  /* 
-  .how_we_work_img {
-    flex: 0 0 350px;
-  } */
-
-  /* .home_content {
-    max-width: 58%;
-  }
-  .how_we_work_content {
-    max-width: 58%;
-  } */
-
-  /* .advantages ul {
-    gap: 5px;
-  } */
-
   .list svg {
     width: 60px;
     height: 59px;
@@ -496,13 +473,9 @@ h2 {
   .list p {
     font-size: 16px;
   }
-  /* .advantages ul > li {
-    transform: scale(0.7);
-  } */
 
   .card {
     padding: 10px 10px 20px 10px;
-    /* width: 263px; */
     flex: 0 1 100%;
   }
 
