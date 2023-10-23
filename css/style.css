@@ -130,11 +130,11 @@ a {
 }
 
 .home_content {
-  flex: 0 1 50%;
+  flex: 1 1 50%;
 }
 
 .home_img {
-  flex: 0 0 50%;
+  flex: 1 1 50%;
 }
 
 h1 {
@@ -215,7 +215,7 @@ h2 {
   padding: 78px 15px;
 }
 
-.advantages ul > li > p {
+.list p {
   font-family: 'Montserrat';
   font-size: 18px;
   font-weight: 500;
@@ -245,7 +245,7 @@ h2 {
 }
 .how_we_work_img {
   /* height: 560px; */
-  flex: 0 0 50%;
+  flex: 1 1 50%;
 }
 
 .how_we_work_img > img {
@@ -256,7 +256,7 @@ h2 {
 }
 
 .how_we_work_content {
-  flex: 0 1 50%;
+  flex: 1 1 50%;
   text-align: left;
 }
 .how_we_work_content h2 {
@@ -289,14 +289,14 @@ h2 {
 
 .card_img {
   display: block;
-  object-fit: cover;
-  /* width: 100%; */
-  /* height: 400px; */
   margin-bottom: 23px;
 }
 .card_img img {
-  width: 320px;
+  /* width: 320px;
+  height: 402px; */
+  width: 100%;
   height: 402px;
+  object-fit: cover;
 }
 
 .card > p {
@@ -383,8 +383,8 @@ h2 {
   }
 
   .home_content {
-    max-width: 70%;
-    flex: 0 0;
+    max-width: 540px;
+    /* flex: 0 0; */
     text-align: center;
     margin-top: 50px;
     text-align: center;
@@ -392,7 +392,7 @@ h2 {
 
   .home_img {
     height: 350px;
-    flex: 0 0 500px;
+    /* flex: 0 0 500px; */
   }
 
   h1 {
@@ -415,7 +415,7 @@ h2 {
     padding-bottom: 30px;
   }
   .about_us_content {
-    max-width: 58%;
+    max-width: 540px;
     padding-bottom: 60px;
     text-align: center;
   }
@@ -441,12 +441,18 @@ h2 {
   }
   .how_we_work_img {
     height: 350px;
-    flex: 0 0 415px;
+    /* flex: 0 0 415px; */
   }
   .how_we_work_content {
-    max-width: 70%;
+    max-width: 540px;
     margin-top: 50px;
     text-align: center;
+  }
+
+  .card {
+    /* padding: 10px 10px 20px 10px; */
+    /* width: 263px; */
+    flex: 0 1 70%;
   }
 }
 
@@ -462,37 +468,48 @@ h2 {
     display: block;
   }
 
-  .home_img {
+  /* .home_img {
     flex: 0 0 422px;
-  }
-
+  } */
+  /* 
   .how_we_work_img {
     flex: 0 0 350px;
-  }
+  } */
 
-  .home_content {
+  /* .home_content {
     max-width: 58%;
   }
   .how_we_work_content {
     max-width: 58%;
+  } */
+
+  /* .advantages ul {
+    gap: 5px;
+  } */
+
+  .list svg {
+    width: 60px;
+    height: 59px;
+    margin-bottom: 10px;
   }
 
-  .advantages ul {
-    gap: 0;
+  .list p {
+    font-size: 16px;
   }
-  .advantages ul > li {
+  /* .advantages ul > li {
     transform: scale(0.7);
-  }
+  } */
 
   .card {
     padding: 10px 10px 20px 10px;
-    width: 263px;
+    /* width: 263px; */
+    flex: 0 1 100%;
   }
 
   .card_img {
     margin-bottom: 10px;
-
     text-align: center;
+    
   }
 
   .card_img img {
